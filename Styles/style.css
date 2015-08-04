@@ -1,0 +1,1336 @@
+/* NORMALIZE */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* CLEARFIX */
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* BORDER-BOX */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* END OF SETUP STYLES */
+/* general font styles */
+body {
+  font: "Raleway", "Montserrat", sans-serif;
+  z-index: 0;
+}
+
+.top-text {
+  font-family: "Raleway", sans-serif;
+  color: #afafaf;
+  text-transform: uppercase;
+}
+
+.main-text {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+/* helper styles */
+.break {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* wrapper styles */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.wrapper p,
+.wrapper ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* top bar styles */
+.top-bar {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid silver;
+}
+
+.top-bar p {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 40px;
+  display: inline;
+}
+
+.top-bar .top-left {
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+
+.top-bar .top-middle {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.top-bar .top-right {
+  width: 20%;
+  height: 100%;
+  float: left;
+  text-align: right;
+}
+
+.top-bar .top-right p {
+  color: #ff5959;
+}
+
+.top-bar .top-right span {
+  color: black;
+}
+
+/* middle bar styles */
+.middle-bar {
+  width: 100%;
+  height: 160px;
+}
+
+.middle-1 {
+  width: 40%;
+  float: left;
+  background: white;
+  padding-top: 65px;
+}
+
+.middle-1 label {
+  text-transform: uppercase;
+  margin: 0 10px 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.middle-1 i {
+  margin: 0 10px 0 0;
+}
+
+.middle-1 input {
+  border: none;
+  border-bottom: 1px solid silver;
+  margin: 0 10px 0 0;
+}
+
+.middle-2 {
+  width: 20%;
+  float: left;
+  background: white;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.middle-3 {
+  width: 40%;
+  float: left;
+  background: white;
+  padding-top: 65px;
+  text-align: right;
+}
+
+.middle-3 img {
+  /*these aren't floating in the right order unless I change their order in the markup! */
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.middle-3 .cart {
+  display: inline-block;
+  position: relative;
+}
+
+.middle-3 .number-of-items {
+  /* how to tie this item to the image?*/
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff5959;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  padding-top: 4px;
+  z-index: 100;
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
+
+.middle-3 img[alt*="heart"] {
+  margin: 3px 20px 0 0;
+  display: inline-block;
+}
+
+.middle-3 p {
+  color: #ff5959;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+/* nav bar styles */
+nav {
+  width: 100%;
+  background: white;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 35px 15px;
+  padding: 1%;
+  transition: 0.5s all ease-in-out;
+}
+
+nav ul li.icon-after {
+  padding-right: 5px;
+  margin-right: 0;
+}
+
+nav ul li:hover {
+  color: #ff5959;
+  border-bottom: 2px solid grey;
+}
+
+nav ul li:last-child {
+  color: #878787;
+  text-decoration: underline;
+}
+
+nav ul i {
+  margin-right: 15px;
+  color: grey;
+}
+
+/* header styles */
+header {
+  width: 100%;
+  padding-top: 20vw;
+  padding-bottom: 20vw;
+  background: url(../Images/header-man.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+header .header-text {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+header p {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: -5vw;
+  top: -5vw;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  color: #afafaf;
+  font-size: 15rem;
+  font-weight: 100;
+  z-index: 1;
+}
+
+header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 6rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  z-index: 100;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+header h1 .alt-style {
+  font-family: Raleway;
+  font-weight: 100;
+}
+
+header .box-icons {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+header i {
+  color: #afafaf;
+  margin: 0 10px;
+}
+
+header i:hover {
+  color: #ff5959;
+}
+
+/* chequered area styles */
+.chequered {
+  margin-top: 2vw;
+}
+
+.equals {
+  position: absolute;
+  width: 12%;
+  height: 4%;
+  border-top: 2px solid #ff5959;
+  border-bottom: 2px solid #ff5959;
+  top: 10%;
+  right: -6%;
+  z-index: 300;
+}
+
+.fashion-top-text {
+  font-family: "Raleway", sans-serif;
+  color: #afafaf;
+  text-transform: uppercase;
+  top: 25%;
+  right: 2%;
+  position: absolute;
+}
+
+.fashion-mid-text {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  top: 35%;
+  right: 2%;
+  position: absolute;
+}
+
+.under-line {
+  width: 50%;
+  height: 1px;
+  background: lightgrey;
+  top: 50%;
+  right: 2%;
+  position: absolute;
+}
+
+.fashion-bottom-text {
+  font-family: Raleway;
+  color: grey;
+  top: 55%;
+  right: 2%;
+  position: absolute;
+}
+
+.half-wrapper {
+  width: 50%;
+  float: left;
+}
+
+.fashion-box {
+  width: 50%;
+  padding-bottom: 50%;
+  float: left;
+  position: relative;
+}
+
+.fashion-box img {
+  position: absolute;
+}
+
+.f-b1 {
+  background: snow;
+}
+
+.f-b2 img {
+  width: 100%;
+}
+
+.f-b3-container {
+  position: absolute;
+  border: 1px solid #ff5959;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.f-b3-container p {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-b3 img {
+  width: 100%;
+}
+
+.f-b3 img p {
+  color: white;
+}
+
+.f-b4 {
+  background: snow;
+}
+
+.f-b5 {
+  background: white;
+  position: relative;
+}
+
+.f-b5-container {
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ff5959;
+}
+
+.fashion-top-text-5,
+.fashion-top-text-3 {
+  position: static;
+  font-family: "Raleway", sans-serif;
+  color: #afafaf;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.fashion-mid-text-5,
+.fashion-mid-text-3 {
+  position: static;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.under-line-5 {
+  width: 50%;
+  height: 1px;
+  background: lightgrey;
+  margin: 10px auto;
+}
+
+.f-b6 {
+  width: 50%;
+  padding-bottom: 100%;
+  float: right;
+  overflow-y: hidden;
+  background: white;
+}
+
+.f-b6 img {
+  width: 100%;
+}
+
+.outline {
+  width: 80%;
+  height: 80%;
+  border: 1px solid white;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.f-b7 {
+  background: url(../Images/childfashion.jpg);
+  background-size: cover;
+}
+
+/* gallery styles */
+.gallery {
+  clear: both;
+  background: white;
+  width: 100%;
+}
+
+.gallery ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.gallery ul i {
+  color: #ff5959;
+}
+
+.gallery ul li {
+  display: inline-block;
+  padding: 100px 20px 55px 20px;
+  text-transform: uppercase;
+  font-family: Helvetica;
+  color: #afafaf;
+  transition: 1s all ease-in-out;
+}
+
+.gallery ul li:hover {
+  color: #313131;
+}
+
+.gallery .gallery-container {
+  background: white;
+  width: 100%;
+}
+
+.gallery .gallery-container div {
+  float: left;
+  width: 23%;
+  padding-bottom: 40%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background: white;
+  position: relative;
+}
+
+.gallery .gallery-container img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.gallery .gallery-container .gallery-text {
+  position: absolute;
+  width: 100%;
+  padding-top: 20px;
+  bottom: 0;
+  left: 0;
+  background: white;
+  margin: 0;
+  text-align: center;
+}
+
+.gallery .gallery-container .gallery-text p {
+  font-family: Raleway;
+  color: #313131;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.gallery .gallery-container .gallery-text p:nth-child(2) {
+  color: #ff5959;
+}
+
+.gallery .gallery-container .exclaim {
+  width: 17%;
+  padding-bottom: 17%;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  top: 3%;
+  right: 5%;
+}
+
+.gallery .gallery-container .exclaim p {
+  position: absolute;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 0.75em;
+  top: 32%;
+}
+
+.gallery .gallery-container .exclaim1 {
+  background: #ff5959;
+}
+
+.gallery .gallery-container .exclaim1 p {
+  left: 17%;
+}
+
+.gallery .gallery-container .exclaim2 {
+  background: #afafaf;
+}
+
+.gallery .gallery-container .exclaim2 p {
+  left: 11%;
+}
+
+.gallery .gallery-container .back {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #afafaf;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  background: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: .5s all ease-in-out;
+  top: 35%;
+}
+
+.gallery .gallery-container .back:hover {
+  background: #ff5959;
+  border: none;
+}
+
+.gallery .gallery-container .back:hover i {
+  color: white;
+}
+
+.gallery .gallery-container .back i {
+  color: #313131;
+  font-size: 1.3em;
+  transition: .5s all ease-in-out;
+}
+
+.gallery .gallery-container .back1 {
+  left: -25%;
+}
+
+.gallery .gallery-container .back2 {
+  right: -25%;
+}
+
+/* image break styles */
+.image-break {
+  clear: both;
+  width: 100%;
+  height: 15vw;
+  background: url(../Images/clothing-rack.jpg);
+  background-size: cover;
+  padding: 5vw 0 5vw 0;
+  position: relative;
+}
+
+.image-break .wrapper-narrow {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.image-break .headshot {
+  width: 12%;
+  padding-bottom: 12%;
+  border-radius: 50%;
+  background: purple;
+  float: left;
+  margin-right: 2%;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+
+.image-break .headshot img {
+  width: 100%;
+  position: absolute;
+}
+
+.image-break .headshot-text {
+  width: 74%;
+  float: left;
+}
+
+.image-break p {
+  margin: 20px 0 20px 0;
+  padding: 0;
+  display: inline;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5rem;
+  display: inline-block;
+}
+
+.image-break .under-line {
+  width: 100px;
+  height: 1px;
+  background: white;
+  position: static;
+  display: block;
+}
+
+.image-break .name {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.image-break .name + p {
+  margin: 0;
+}
+
+.image-break .boxes {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.image-break i {
+  color: #afafaf;
+  margin: 0 10px;
+}
+
+.image-break i:hover {
+  color: #ff5959;
+}
+
+/* blog section */
+.blog {
+  width: 100%;
+  background: white;
+  text-align: center;
+}
+
+.blog h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  padding: 5% 0;
+}
+
+.blog .blog-container {
+  width: 50%;
+  background: aqua;
+  float: left;
+}
+
+.blog .blog-container .blog-pic {
+  width: 50%;
+  padding-bottom: 50%;
+  float: left;
+}
+
+.blog .blog-container .blog-pic-1 {
+  background: url(../Images/vintage.jpg);
+  background-size: cover;
+}
+
+.blog .blog-container .blog-pic-2 {
+  background: url(../Images/streetstyle.jpg);
+  background-size: cover;
+}
+
+.blog .blog-text {
+  width: 50%;
+  padding-bottom: 50%;
+  background: white;
+  float: left;
+  position: relative;
+  text-align: left;
+}
+
+.blog .blog-text .blog-text-container {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blog .blog-text p {
+  position: static;
+  margin: 2% 0;
+}
+
+.blog .blog-text .more {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8em;
+  color: #afafaf;
+}
+
+/* logos section */
+.logos {
+  width: 100%;
+  background: white;
+  clear: both;
+  text-align: center;
+}
+
+.logos .logos-wrapper {
+  width: 100%;
+  height: 13vw;
+  clear: both;
+  background: white;
+}
+
+.logos .logos-wrapper .logo-container {
+  width: 16.666%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  background: white;
+}
+
+.logos .logos-wrapper .verticalCenterer {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* buttons section */
+.buttons {
+  width: 100%;
+}
+
+.buttons .button-wrapper {
+  background: white;
+  margin: auto;
+  padding-bottom: 8vw;
+}
+
+.buttons button {
+  width: 28%;
+  margin: 0 2.5%;
+  height: 3vw;
+  text-transform: uppercase;
+  position: relative;
+  background: white;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  float: left;
+}
+
+.buttons button img {
+  width: 8%;
+  margin-right: 5%;
+}
+
+.buttons button p {
+  font-family: "Montserrat", sans-serif;
+  font-size: .7em;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.buttons .outline {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #afafaf;
+  position: absolute;
+}
+
+.buttons .outline-1 {
+  top: -.15vw;
+  left: .15vw;
+  border: 1px solid #afafaf;
+}
+
+.buttons .outline-2 {
+  top: .15vw;
+  left: -.15vw;
+}
+
+.buttons .hr {
+  width: 30%;
+  height: 1px;
+  background: #afafaf;
+  margin: 1vw auto 4vw auto;
+}
+
+/* links section */
+.links {
+  width: 100%;
+  background: #f8f8f8;
+}
+
+.link-bar {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.link-bar .brand-name {
+  width: 25%;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  float: left;
+}
+
+.social-media {
+  width: 25%;
+  float: left;
+}
+
+.social-media div {
+  width: 13%;
+  padding-bottom: 13%;
+  background: #ff5959;
+  border-radius: 50%;
+  position: relative;
+  float: left;
+  text-align: center;
+  margin: 0 2.5%;
+}
+
+.social-media div i {
+  position: absolute;
+  color: white;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  left: 30%;
+}
+
+.newsletter {
+  width: 50%;
+  float: left;
+}
+
+.newsletter label {
+  float: left;
+  margin-left: 1%;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  margin-right: 2%;
+}
+
+.newsletter input {
+  width: 35%;
+  height: 35%;
+  margin-right: 2%;
+  background: white;
+  border: 1px solid #878787;
+  float: left;
+}
+
+.newsletter button {
+  width: 30%;
+  height: 35%;
+  /* this has stopped working */
+  float: left;
+  border: 1px solid #313131;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+}
+
+.link-lists {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.link-column {
+  clear: both;
+  width: 25%;
+}
+
+.link-column ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 2vw 0;
+  line-height: 1.8em;
+  font-size: .8em;
+  font-family: "Raleway", sans-serif;
+  color: #313131;
+}
+
+.contact {
+  font-weight: bolder;
+  color: #ff5959;
+}
+
+.link-column-2 li,
+.link-column-3 li,
+.link-column-4 li {
+  transition: .5s all ease-in-out;
+}
+
+.link-column-2 li:hover,
+.link-column-3 li:hover,
+.link-column-4 li:hover {
+  transform: translatex(10%);
+  color: #ff5959;
+}
+
+/* footer styles */
+footer {
+  width: 100%;
+  height: 10vw;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #313131;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 5% 3%;
+}
+
+footer p {
+  text-transform: uppercase;
+}
+
+.diff-color {
+  color: #ff5959;
+}
+
+/* media queries */
+@media (max-width: 940px) {
+  .visible {
+    display: none;
+  }
+  .wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .top-bar .top-left,
+  .top-bar .top-middle,
+  .top-bar .top-right {
+    width: 33.333%;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 25px 5px;
+  }
+  .half-wrapper {
+    float: none;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .gallery .gallery-container div {
+    width: 48%;
+    padding-bottom: 70%;
+    border: 2px solid purple;
+    float: left;
+  }
+  .gallery .gallery-container .gallery-text {
+    padding: 5px 0;
+  }
+  .gallery .gallery-container .back1 {
+    left: -5%;
+  }
+  .gallery .gallery-container .back2 {
+    right: -5%;
+  }
+  .logos .logos-wrapper .logo-container {
+    width: 33.33%;
+    /* this isn't working */
+    height: 100%;
+    border: 2px solid green;
+  }
+  .logos .logos-wrapper {
+    margin-bottom: 30px;
+  }
+  .buttons button {
+    width: 50%;
+    height: 6vw;
+    margin: 3% 25%;
+    clear: both;
+    float: none;
+    background: yellow;
+  }
+  .links .link-lists .link-column {
+    width: 50%;
+    padding: 2% 3%;
+  }
+  .links .link-lists .link-column-2,
+  .links .link-lists .link-column-3 {
+    background: #afafaf;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-bar .top-left,
+  .top-bar .top-middle,
+  .top-bar .top-right {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .top-bar .top-left {
+    font-weight: 900;
+  }
+  .top-bar .top-middle,
+  .top-bar .top-right {
+    background: #f8f8f8;
+  }
+  nav {
+    text-align: center;
+  }
+  nav ul {
+    display: none;
+  }
+  .hidden {
+    display: block;
+    width: 15%;
+    padding-top: 30px;
+    margin: 0px 42.5%;
+  }
+  header {
+    background: white;
+    padding: 50px 0;
+  }
+  header .header-text p,
+  header .header-text h1 {
+    color: #313131;
+    font-size: 2em;
+    text-align: center;
+    position: static;
+  }
+  .blog .blog-container {
+    width: 80%;
+    margin: 2vw 20%;
+  }
+  .middle-1,
+  .middle-3,
+  .middle-2 {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+  }
+  .middle-1,
+  .middle-3 {
+    background: snow;
+  }
+}
+
+.links .link-bar .brand-name,
+.links .link-bar .social-media,
+.links .link-bar .newsletter {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .visible-2 {
+    display: none;
+  }
+  .gallery .gallery-container div {
+    width: 98%;
+    padding-bottom: 140%;
+    border: 2px solid yellow;
+    float: left;
+    margin-bottom: 30px;
+  }
+  .buttons button {
+    width: 70%;
+    height: 10vw;
+    margin: 3% 15%;
+    clear: both;
+    float: none;
+    background: yellow;
+  }
+  .logos .logos-wrapper .logo-container {
+    width: 50%;
+    height: 100%;
+    border: 2px solid red;
+    margin-bottom: 30px;
+  }
+  .buttons button {
+    font-size: .5em;
+    background: palegreen;
+  }
+  .links .link-lists .link-column {
+    width: 100%;
+    padding: 2% 3%;
+  }
+  .links .link-lists .link-column-2,
+  .links .link-lists .link-column-4 {
+    background: #f8f8f8;
+  }
+  .links .link-lists .link-column-1,
+  .links .link-lists .link-column-3 {
+    background: #afafaf;
+  }
+  footer ul li {
+    display: block;
+  }
+}
